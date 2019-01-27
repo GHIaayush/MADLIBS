@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Purchase</title>
+<link rel="stylesheet" href="design.css">
+</head>
+<body id ="nextBack">
+
+<h1 id = "header"><img src="mad.jpg" alt="rip" style="width:300px" align="middle"height:15px"></h1>
+
+<script >
+var into = new SpeechSynthesisUtterance("Please Fill out the blank Space below to generate the Madlibs");
+
+	window.speechSynthesis.speak(into);
+	</script>
+<form onsubmit = "receipt()">
+<div id = "someclass">
+<label>Name of Country</label><input type ="text" id = "countryName" pattern = "[A-Z a-z]*" required autocomplete='given-name'><br>
+
+<label>Name of the City</label> <input type="text" id="cityName"  pattern ="[A-Z a-z]*" required autocomplete='family-name'><br>
+
+<label>Any art Work you know</label> <input type= "text" id="artWork1" required><br>
+
+<label>Favorite Resturant</label><input type ="text" id="returant" required><br>
+
+<label>Adjective</label><input type ="text" id="adjtv" required><br>
+
+<label>Any kind of cloth</label> <input type ="text" id="cloth" required><br>
+
+<label>Any art work you know</label><input type ="text" id="artWork2" required><br>
+
+<label>Any art work you know</label><input type ="text" id="artWork3" required><br>
+<label>Food</label><input type ="text" id="food" required><br>
+<br>
+<br>
+<p ><button id ="center">Generate Madlibs</button> 
+</div>
+</form>
+<script>
+function receipt(){
+	var randomNumber = Math.random();
+	//generate the random int number in java script
+	randomNumber = Math.floor(Math.random()*5) + 1
+	//console.log(randomNumber);
+	var result = document.body;
+	
+	var country = document.getElementById("countryName").value;
+	var city = document.getElementById("cityName").value;
+	var artWork1 = document.getElementById("artWork1").value;
+	var favRest = document.getElementById("returant").value;
+	var adj = document.getElementById("adjtv").value;
+	var clothes = document.getElementById("cloth").value;
+	var artWork2 = document.getElementById("artWork2").value;
+	var artWork3 = document.getElementById("artWork3").value;
+	var food = document.getElementById("food").value;
+	var n =  new Date();
+	var y = n.getFullYear();
+	var m = n.getMonth() + 1;
+	var d = n.getDate();
+	var date = d + "-" + m + "-" + y;
+	if(randomNumber == 1){
+	var solLewitt = "Sol Lewitt was borned in "+country+". Once he was in "+city+
+	" he was staring at "+artWork1+" sitting at a table at "+favRest+". His hair is "+adj+" and he's wearing a "+clothes+". He is separating his "+artWork2+" from his "+artWork3+". Suddenly, waiter arrives with "+food+" and says time to take a break sir. Lewitt was "+adj+".";
+	}
+	else if(randomNumber == 2){
+		var solLewitt = "Casey Reas was borned in "+country+". Sitting at a table in "+favRest+" he was staring at "+artWork1+" in the middle of "+city+". His hand is "+adj+" and he is wearing "+clothes+". He was trying to differentiate between "+artWork2+" and "+artWork3+". Out of nowhere his friend walked in with "+food+" and said King of Processing; do not forget to process your life!!!";
+	}
+	else if(randomNumber == 3){
+		var solLewitt ="Charlotte Moorman born in "+country+" and died in "+ food+ " with her favorite "+ artWork2+". " +"Charlotte was an "+food+"and "+adj+"when she came to "+ city +" in 1957.She was the one who started the legacy of "+artWork3+"which still remains today. In February 1967, she was wearing a "+clothes+ at +country +" and eating "+artWork1+".";
+	}
+	else if(randomNumber == 4){
+		var solLewitt = "Banksy was born in "+country+" at "+city+" . Banksy was loved by everyone because he was "+adj+". He is an "+food+" who has mainly done freehand arts. Even though he is publicly known as Banksy his actual "+clothes+" has never been revealed. In 2006, he was painted an image of "+ artWork2+" that became very "+favRest+".";	
+	}
+	else{
+		var solLewitt = "Christian Marclay is a "+adj+" artist and a "+ food+"He was born in "+country+"on January 11,1955 and raised in "+city+". His "+artWork1+" has been very popular. He made "+artWork3+" compounded hundreds of film scenes where a clock or a watch displays certain "+food+". He received an award called "+favRest+" for his "+clothes+"  where he wore his favorite "+artWork2+".";
+	}
+	result.innerHTML = "<div id='output'><h3 id ='center' style = 'color:white'>Your Madlib </h3>"+"<p id='color'>"+solLewitt+"</p><br>"+"<a href ='madlibs.html'><button onclick='madlibs.html style = 'color:white'>Play Again</button></a>";
+	var msg = new SpeechSynthesisUtterance(solLewitt);
+
+	window.speechSynthesis.speak(msg);
+}
+</script>
+</body>
+</html>

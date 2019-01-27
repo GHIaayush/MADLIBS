@@ -1,0 +1,43 @@
+
+<!-- Author:Aayush Ghimire
+Madlibs generator
+text to voice conversion -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MadLibs</title>
+<link rel="stylesheet" href="design.css">
+</head>
+
+<body id = "back">
+	<script >var msg = new SpeechSynthesisUtterance("Welcome to Madlibs, created by Aayush and Puja!!!");
+
+	window.speechSynthesis.speak(msg);
+
+	var textAgain = new SpeechSynthesisUtterance("Press start game button if you know how to play the games else read the 'Quick review on right hand side.")
+	window.speechSynthesis.speak(textAgain);
+</script>
+<h1 id = "header"><img src="mad.jpg" alt="rip" style="width:300px" align="middle"height:15px"></h1>
+<div class="row">
+  <div class="column">
+    <img src="rip.jpeg" alt="rip" style="width:100%" "height:400px">
+  </div>
+  <div class="column">
+  	<p id="insidePara"><b><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quick Review for MadLibs</b></i><br> Mad libs is a game where you
+answer the series of questions to user and based on the input entered by the user. The input is used to fill in the blanks in a story that we already have.After all the input is received we will create a story which is based on
+the users input. For this game, we will give you a form on right side of the page and user should fill the form based on the question. All the fields are required so you were not able to skip any questions. If you try to skip it wont allow you to generate the madlibs. 
+<br>
+This Madlibs is based on the famous Artist in the art history. Everytime you generate the Madlibs you will generate a story of different artist.You are not able to chose which artist you want because if you know the story then it wont be fun. So the game is created such that the random story is generated every time you play it.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enjoy your game!
+</p>
+</div>
+<p><br><br><br><a href="game.html"><button class="button button1" onclick="game.html">Start Game</button></a></p>
+<div class="footer">
+  <p id = "center"><i>Thankyou for visiting our page.Hope you will enjoy!</p>
+</div>
+
+
+</body>
+</html>
